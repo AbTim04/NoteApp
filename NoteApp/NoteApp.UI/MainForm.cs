@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using NoteApp.Library;
@@ -32,7 +31,7 @@ namespace NoteAppUI
             _project = ProjectManager.LoadFromFile(ProjectManager.DefaultPath);
             RefreshListBox();
 
-            //Выбирает последнюю просматреваемую заметку, если таковая существует в списке
+            //Выбор последней просматриваемой заметки, если она существует в списке
             if (_viewedNotes.Count != 0)
             {
                 NoteListBox.SelectedIndex = _project.SelectedNoteIndex;
@@ -40,11 +39,11 @@ namespace NoteAppUI
         }
 
         /// <summary>
-        /// Обновляет список заметок, отображаемых на главной форме
+        /// Обновление списка заметок на главной форме
         /// </summary>
         public void RefreshListBox()
         {
-            //Производит сортировку в соответствии с выбранной категорией
+            //Сортировка по выбранной категории
             if (CategoryComboBox.SelectedItem == (object)"All")
             {
                 _project.Notes = _project.SortNotes(_project.Notes);
@@ -70,8 +69,8 @@ namespace NoteAppUI
         }
 
         /// <summary>
-        /// Обновляет отображение правой панели главной формы.
-        /// Выводит название, текст, категорию и даты выбранной заметки
+        /// Обновление отображения правой части главной формы
+        /// Отображение названия, текса, категории и даты выбранной заметки
         /// </summary>
         public void RefreshCurrentNote()
         {
@@ -96,7 +95,7 @@ namespace NoteAppUI
         }
 
         /// <summary>
-        /// Вызывает окно создания заметки
+        /// Вызов окно создания заметки
         /// </summary>
         private void AddNote()
         {
@@ -108,11 +107,11 @@ namespace NoteAppUI
             {
                 note = noteForm.Note;
 
-                //Добавляет заметку в реальный список
+                //Добавление заметки в реальный список
                 _project.Notes.Insert(0, note);
-                //Добавляет заметку в ListBox
+                //Добавление заметки  в ListBox
                 NoteListBox.Items.Insert(0, note.Name);
-                //Добавляет заметку в отображаемый список
+                //Добавление заметки  в отображаемый список
                 _viewedNotes.Insert(0, note);
 
                 NoteListBox.SelectedIndex = 0;
@@ -123,7 +122,7 @@ namespace NoteAppUI
         }
 
         /// <summary>
-        /// Удаляет заметку при подтверждении
+        /// Удаление заметки при подтверждении
         /// </summary>
         private void RemoveNote()
         {
@@ -139,12 +138,12 @@ namespace NoteAppUI
                     ("Delete note?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    //Удаляет заметку в реальном списке
+                    //Удаление заметки в реальном списке
                     var realIndex = _project.Notes.IndexOf(_viewedNotes[selected]);
                     _project.Notes.RemoveAt(realIndex);
-                    //Удаляет заметку в отображаемом  списке
+                    //Удаление заметки в отображаемом  списке
                     _viewedNotes.RemoveAt(selected);
-                    //Удаляет заметку в ListBox
+                    //Удаление заметки в ListBox
                     NoteListBox.Items.RemoveAt(selected);
 
                     if (NoteListBox.Items.Count > 0)
@@ -158,7 +157,7 @@ namespace NoteAppUI
         }
 
         /// <summary>
-        /// Вызывает окно редактирования заметки
+        /// Вызов окна редактирования заметки
         /// </summary>
         private void EditNote()
         {
@@ -178,16 +177,16 @@ namespace NoteAppUI
                 {
                     note = editForm.Note;
 
-                    //Заменяет заметку в реальном списке
+                    //Замена заметки в реальном списке
                     var realIndex = _project.Notes.IndexOf(_viewedNotes[selected]);
                     _project.Notes.RemoveAt(realIndex);
                     _project.Notes.Insert(0, note);
 
-                    //Заменяет заметку в отображаемом списке
+                    //Замена заметки в отображаемом списке
                     _viewedNotes.RemoveAt(selected);
                     _viewedNotes.Insert(0, note);
-                    
-                    //Заменяет заметку в ListBox
+
+                    //ЗЗамена заметки в ListBox
                     NoteListBox.Items.RemoveAt(selected);
                     NoteListBox.Items.Insert(0, note.Name);
 
