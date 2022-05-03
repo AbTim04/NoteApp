@@ -118,7 +118,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>md "$(SolutionDir)InstallScripts"
+md "$(SolutionDir)InstallScripts\Release"
+md "$(SolutionDir)InstallScripts\Installers"
+xcopy /q /y "$(ProjectDir)$(OutDir)*.dll" "$(SolutionDir)InstallScripts\Release"
+xcopy /q /y "$(ProjectDir)$(OutDir)*.exe" "$(SolutionDir)InstallScripts\Release"</PostBuildEvent>
   </PropertyGroup>
 </Project>
