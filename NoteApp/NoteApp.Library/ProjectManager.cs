@@ -14,7 +14,7 @@ namespace NoteApp.Library
         /// </summary>
         public static string DefaultPath { get; private set; } =
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
-            + @"\ABdeevTV\NoteApp\NoteApp.notes";
+            + @"\AbdeevTV\NoteApp\NoteApp.notes";
 
         /// <summary>
         /// Сериализация
