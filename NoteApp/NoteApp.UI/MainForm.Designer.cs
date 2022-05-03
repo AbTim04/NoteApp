@@ -173,9 +173,9 @@ namespace NoteAppUI
             this.DeleteNoteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.DeleteNoteButton.FlatAppearance.BorderSize = 0;
             this.DeleteNoteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteNoteButton.Location = new System.Drawing.Point(73, 395);
+            this.DeleteNoteButton.Location = new System.Drawing.Point(88, 388);
             this.DeleteNoteButton.Name = "DeleteNoteButton";
-            this.DeleteNoteButton.Size = new System.Drawing.Size(22, 22);
+            this.DeleteNoteButton.Size = new System.Drawing.Size(32, 32);
             this.DeleteNoteButton.TabIndex = 5;
             this.DeleteNoteButton.UseVisualStyleBackColor = true;
             this.DeleteNoteButton.Click += new System.EventHandler(this.DeleteNoteButton_Click);
@@ -187,9 +187,9 @@ namespace NoteAppUI
             this.EditNoteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.EditNoteButton.FlatAppearance.BorderSize = 0;
             this.EditNoteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditNoteButton.Location = new System.Drawing.Point(43, 395);
+            this.EditNoteButton.Location = new System.Drawing.Point(50, 388);
             this.EditNoteButton.Name = "EditNoteButton";
-            this.EditNoteButton.Size = new System.Drawing.Size(22, 22);
+            this.EditNoteButton.Size = new System.Drawing.Size(32, 32);
             this.EditNoteButton.TabIndex = 4;
             this.EditNoteButton.UseVisualStyleBackColor = true;
             this.EditNoteButton.Click += new System.EventHandler(this.EditNoteButton_Click);
@@ -201,9 +201,9 @@ namespace NoteAppUI
             this.AddNoteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.AddNoteButton.FlatAppearance.BorderSize = 0;
             this.AddNoteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddNoteButton.Location = new System.Drawing.Point(15, 395);
+            this.AddNoteButton.Location = new System.Drawing.Point(12, 388);
             this.AddNoteButton.Name = "AddNoteButton";
-            this.AddNoteButton.Size = new System.Drawing.Size(22, 22);
+            this.AddNoteButton.Size = new System.Drawing.Size(32, 32);
             this.AddNoteButton.TabIndex = 3;
             this.AddNoteButton.UseVisualStyleBackColor = true;
             this.AddNoteButton.Click += new System.EventHandler(this.AddNoteButton_Click);
