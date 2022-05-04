@@ -35,7 +35,7 @@ namespace NoteAppUI
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.CreatedLlabel = new System.Windows.Forms.Label();
             this.CreatedDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.ModifiedLabel = new System.Windows.Forms.Label();
+            this.ChangedLabel = new System.Windows.Forms.Label();
             this.ModifiedDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.MainTextBox = new System.Windows.Forms.TextBox();
             this.OkButton = new System.Windows.Forms.Button();
@@ -97,14 +97,14 @@ namespace NoteAppUI
             this.CreatedDateTimePicker.Size = new System.Drawing.Size(92, 20);
             this.CreatedDateTimePicker.TabIndex = 5;
             // 
-            // ModifiedLabel
+            // ChangedLabel
             // 
-            this.ModifiedLabel.AutoSize = true;
-            this.ModifiedLabel.Location = new System.Drawing.Point(175, 75);
-            this.ModifiedLabel.Name = "ModifiedLabel";
-            this.ModifiedLabel.Size = new System.Drawing.Size(50, 13);
-            this.ModifiedLabel.TabIndex = 6;
-            this.ModifiedLabel.Text = "Modified:";
+            this.ChangedLabel.AutoSize = true;
+            this.ChangedLabel.Location = new System.Drawing.Point(175, 75);
+            this.ChangedLabel.Name = "ChangedLabel";
+            this.ChangedLabel.Size = new System.Drawing.Size(53, 13);
+            this.ChangedLabel.TabIndex = 6;
+            this.ChangedLabel.Text = "Changed:";
             // 
             // ModifiedDateTimePicker
             // 
@@ -159,7 +159,7 @@ namespace NoteAppUI
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.MainTextBox);
             this.Controls.Add(this.ModifiedDateTimePicker);
-            this.Controls.Add(this.ModifiedLabel);
+            this.Controls.Add(this.ChangedLabel);
             this.Controls.Add(this.CreatedDateTimePicker);
             this.Controls.Add(this.CreatedLlabel);
             this.Controls.Add(this.CategoryComboBox);
@@ -182,7 +182,7 @@ namespace NoteAppUI
         private System.Windows.Forms.ComboBox CategoryComboBox;
         private System.Windows.Forms.Label CreatedLlabel;
         private System.Windows.Forms.DateTimePicker CreatedDateTimePicker;
-        private System.Windows.Forms.Label ModifiedLabel;
+        private System.Windows.Forms.Label ChangedLabel;
         private System.Windows.Forms.DateTimePicker ModifiedDateTimePicker;
         private System.Windows.Forms.TextBox MainTextBox;
         private System.Windows.Forms.Button OkButton;

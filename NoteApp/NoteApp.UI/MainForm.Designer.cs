@@ -49,7 +49,7 @@ namespace NoteAppUI
             this.ShowCategoryLabel = new System.Windows.Forms.Label();
             this.TextBox = new System.Windows.Forms.TextBox();
             this.ModifiedDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.ModifiedLabel = new System.Windows.Forms.Label();
+            this.ChangedLabel = new System.Windows.Forms.Label();
             this.CreatedDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.CreatedLabel = new System.Windows.Forms.Label();
             this.NoteCategoryLabel = new System.Windows.Forms.Label();
@@ -156,7 +156,7 @@ namespace NoteAppUI
             // 
             this.splitContainer1.Panel2.Controls.Add(this.TextBox);
             this.splitContainer1.Panel2.Controls.Add(this.ModifiedDateTimePicker);
-            this.splitContainer1.Panel2.Controls.Add(this.ModifiedLabel);
+            this.splitContainer1.Panel2.Controls.Add(this.ChangedLabel);
             this.splitContainer1.Panel2.Controls.Add(this.CreatedDateTimePicker);
             this.splitContainer1.Panel2.Controls.Add(this.CreatedLabel);
             this.splitContainer1.Panel2.Controls.Add(this.NoteCategoryLabel);
@@ -263,14 +263,14 @@ namespace NoteAppUI
             this.ModifiedDateTimePicker.Size = new System.Drawing.Size(91, 20);
             this.ModifiedDateTimePicker.TabIndex = 7;
             // 
-            // ModifiedLabel
+            // ChangedLabel
             // 
-            this.ModifiedLabel.AutoSize = true;
-            this.ModifiedLabel.Location = new System.Drawing.Point(155, 65);
-            this.ModifiedLabel.Name = "ModifiedLabel";
-            this.ModifiedLabel.Size = new System.Drawing.Size(50, 13);
-            this.ModifiedLabel.TabIndex = 6;
-            this.ModifiedLabel.Text = "Modified:";
+            this.ChangedLabel.AutoSize = true;
+            this.ChangedLabel.Location = new System.Drawing.Point(155, 65);
+            this.ChangedLabel.Name = "ChangedLabel";
+            this.ChangedLabel.Size = new System.Drawing.Size(53, 13);
+            this.ChangedLabel.TabIndex = 6;
+            this.ChangedLabel.Text = "Changed:";
             // 
             // CreatedDateTimePicker
             // 
@@ -369,7 +369,7 @@ namespace NoteAppUI
         private System.Windows.Forms.Label ShowCategoryLabel;
         private System.Windows.Forms.TextBox TextBox;
         private System.Windows.Forms.DateTimePicker ModifiedDateTimePicker;
-        private System.Windows.Forms.Label ModifiedLabel;
+        private System.Windows.Forms.Label ChangedLabel;
         private System.Windows.Forms.DateTimePicker CreatedDateTimePicker;
         private System.Windows.Forms.Label CreatedLabel;
         private System.Windows.Forms.Label NoteCategoryLabel;

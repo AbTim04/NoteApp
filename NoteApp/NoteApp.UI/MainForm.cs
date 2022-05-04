@@ -78,7 +78,7 @@ namespace NoteAppUI
             if (selected == -1)
             {
                 TextBox.Text = "";
-                NoteTitleLabel.Text = "No title";
+                NoteTitleLabel.Text = "There is no title";
                 NoteCategoryLabel.Text = "none";
                 CreatedDateTimePicker.Value = DateTime.Now;
                 ModifiedDateTimePicker.Value = DateTime.Now;
